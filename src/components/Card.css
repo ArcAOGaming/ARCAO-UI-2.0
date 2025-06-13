@@ -1,0 +1,28 @@
+.card {
+  background: var(--primary-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card-content {
+  padding: 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.card-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

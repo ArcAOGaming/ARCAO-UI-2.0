@@ -1,0 +1,11 @@
+.scrambleText {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 100;
+  font-size: 48px;
+  color: white;
+}
+
+.dud {
+  color: #333;
+  transition: color 0.2s;
+}

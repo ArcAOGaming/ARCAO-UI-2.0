@@ -1,0 +1,347 @@
+.delegate-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .delegate-container {
+    padding: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+.delegate-container h1 {
+  color: #333;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .delegate-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.connect-wallet-message {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .connect-wallet-message {
+    padding: 1.5rem;
+  }
+}
+
+.connect-wallet-message p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .connect-wallet-message p {
+    font-size: 1rem;
+  }
+}
+
+.delegation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .delegation-content {
+    gap: 1.5rem;
+  }
+}
+
+.delegations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.delegations-header h2 {
+  margin: 0;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .delegations-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.refresh-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.refresh-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .loading {
+    padding: 1.5rem;
+  }
+}
+
+.no-delegations {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .no-delegations {
+    padding: 1.5rem;
+  }
+  
+  .no-delegations p {
+    font-size: 1rem;
+  }
+}
+
+.delegations-list {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.delegations-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 600px;
+}
+
+.table-header {
+  display: flex;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .table-header {
+    font-size: 0.9rem;
+  }
+}
+
+.table-header > div, .delegation-row > div, .total-row > div {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .table-header > div, .delegation-row > div, .total-row > div {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+.wallet-column {
+  flex: 3;
+}
+
+.percentage-column {
+  flex: 2;
+  text-align: center !important;
+}
+
+.actions-column {
+  flex: 2;
+  text-align: center !important;
+}
+
+.delegation-row {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .delegation-row {
+    font-size: 0.9rem;
+  }
+}
+
+.delegation-row:hover {
+  background-color: #f9f9f9;
+}
+
+.total-row {
+  display: flex;
+  background-color: #f5f5f5;
+  font-weight: bold;
+  border-top: 2px solid #e0e0e0;
+}
+
+.arcao-delegation {
+  background-color: rgba(144, 238, 144, 0.2);
+}
+
+.arcao-badge {
+  background-color: #4CAF50;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-right: 8px;
+}
+
+.remove-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.remove-button:hover:not(:disabled) {
+  background-color: #ff5252;
+}
+
+.remove-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.delegation-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .delegation-actions {
+    gap: 1rem;
+  }
+}
+
+.delegate-arcao-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .delegate-arcao-button {
+    min-width: auto;
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+.delegate-arcao-button:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delegate-arcao-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-note {
+  background-color: #f8f9fa;
+  border-left: 4px solid #4CAF50;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0 4px 4px 0;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .info-note {
+    padding: 0.875rem;
+    margin-top: 0.875rem;
+  }
+}
+
+.info-note p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .info-note p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #d32f2f;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #d32f2f;
+}
+
+.success-message {
+  background-color: #e8f5e9;
+  color: #388e3c;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #388e3c;
+}
+
+@media (max-width: 768px) {
+  .error-message,
+  .success-message {
+    padding: 0.875rem;
+    margin-bottom: 0.875rem;
+    font-size: 0.9rem;
+  }
+}
