@@ -12,9 +12,14 @@
     "deploy-undername": "npm run build && permaweb-deploy --deploy-folder ./dist --ant-process $DEPLOY_ANT_PROCESS_ID --undername $DEPLOY_UNDERNAME"
   },
   "dependencies": {
+    "@arcaogaming/project-links": "1.0.23",
+    "@lottiefiles/react-lottie-player": "3.6.0",
+    "ao-js-sdk": "0.0.3",
     "permaweb-deploy": "2.1.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-ga4": "2.1.0",
+    "styled-components": "6.1.19"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

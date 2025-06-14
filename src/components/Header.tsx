@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import WalletConnection from '../shared-components/Wallet/WalletConnection';
 import { ARCAO_LINKS } from '../links';
 import { scrollToSection, VALID_SECTIONS, SectionId } from '../utils/scrollUtils';
+import logo from '../assets/logo.png';
 
 interface HeaderProps {
   toggleSidebar: () => void;
@@ -86,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isPage }) => {
     <header className="header">
       <a href="/" style={{ textDecoration: 'none' }}>
         <img
-          src={require('../assets/logo.png')}
+          src={logo}
           alt="Arc Logo"
           className="header-logo"
           style={{ cursor: 'pointer' }}

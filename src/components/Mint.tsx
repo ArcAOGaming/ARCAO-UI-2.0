@@ -4,14 +4,14 @@ import {
   PIOracleClient,
   PITokenClient, 
   PIDelegateClient
-} from 'ao-process-clients/dist/src/clients/pi';
+} from 'ao-js-sdk/dist/src/clients/pi';
 // Use specific type imports from their correct locations
-import { PIToken } from 'ao-process-clients/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
-import { TickHistoryEntry } from 'ao-process-clients/dist/src/clients/pi/PIToken/abstract/IPITokenClient';
-import { DelegationInfo } from 'ao-process-clients/dist/src/clients/pi/delegate/abstract/types';
-import { TokenData } from 'ao-process-clients/dist/src/clients/pi/PIToken/types';
-import { TokenClientMap, TokenClientPair, StateStructure } from 'ao-process-clients/dist/src/clients/pi/oracle/types';
-import { TokenClient } from 'ao-process-clients/dist/src/clients/ao';
+import { PIToken } from 'ao-js-sdk/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
+import { TickHistoryEntry } from 'ao-js-sdk/dist/src/clients/pi/PIToken/abstract/IPITokenClient';
+import { DelegationInfo } from 'ao-js-sdk/dist/src/clients/pi/delegate/abstract/types';
+import { TokenData } from 'ao-js-sdk/dist/src/clients/pi/PIToken/types';
+import { TokenClientMap, TokenClientPair, StateStructure } from 'ao-js-sdk/dist/src/clients/pi/oracle/types';
+import { TokenClient } from 'ao-js-sdk/dist/src/clients/ao';
 import { DryRunResult } from '@permaweb/aoconnect/dist/lib/dryrun';
 import { useWallet } from '../shared-components/Wallet/WalletContext';
 import './Mint.css';
@@ -20,7 +20,7 @@ import './Mint.css';
 import PITokens from './mint/components/PITokens';
 import DelegationManagement from './mint/components/DelegationManagement';
 
-// StateStructure type is now imported from ao-process-clients
+// StateStructure type is now imported from ao-js-sdk
 
 // All styled components have been replaced with CSS classes from Mint.css
 
@@ -32,9 +32,9 @@ const LoadingSpinner: React.FC = () => {
 };
 
 
-// TokenClientPair and TokenClientMap types are now imported from ao-process-clients
+// TokenClientPair and TokenClientMap types are now imported from ao-js-sdk
 
-// TokenData type is now imported from ao-process-clients
+// TokenData type is now imported from ao-js-sdk
 
 const Mint: React.FC = () => {
   // Get the wallet address from the wallet context
@@ -114,7 +114,7 @@ const Mint: React.FC = () => {
     
     // Initialize the Oracle client with custom CU URL
     const initOracleClient = () => {
-      // Process ID for the Oracle client (from ao-process-clients constants)
+      // Process ID for the Oracle client (from ao-js-sdk constants)
       const DELEGATION_ORACLE_PROCESS_ID = 'It-_AKlEfARBmJdbJew1nG9_hIaZt0t20wQc28mFGBE';
       
       // Create an instance with custom CU URL using the static build method
@@ -131,7 +131,7 @@ const Mint: React.FC = () => {
     
     // Initialize the Delegate client with custom CU URL
     const initDelegateClient = () => {
-      // Process ID for the Delegate client (from ao-process-clients constants)
+      // Process ID for the Delegate client (from ao-js-sdk constants)
       const PI_DELEGATE_PROCESS_ID = 'cuxSKjGJ-WDB9PzSkVkVVrIBSh3DrYHYz44usQOj5yE';
       
       console.log('Creating a PIDelegateClient with improved error handling');
@@ -240,7 +240,7 @@ const Mint: React.FC = () => {
       try {
         setLoading(prev => ({ ...prev, tokenClients: true, tokenClientPairs: true }));
         
-        // Use the built-in method from ao-process-clients to create client pairs
+        // Use the built-in method from ao-js-sdk to create client pairs
         // This now uses the default builder pattern under the hood
         const clientPairs = await oracleClient.createTokenClientPairsArray();
         

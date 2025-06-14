@@ -1,10 +1,10 @@
 import React from 'react';
-import { PITokenClient } from 'ao-process-clients/dist/src/clients/pi';
-import { PIToken } from 'ao-process-clients/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
-import { TickHistoryEntry } from 'ao-process-clients/dist/src/clients/pi/PIToken/abstract/IPITokenClient';
-import { TokenClient } from 'ao-process-clients/dist/src/clients/ao';
+import { PITokenClient } from 'ao-js-sdk/dist/src/clients/pi';
+import { PIToken } from 'ao-js-sdk/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
+import { TickHistoryEntry } from 'ao-js-sdk/dist/src/clients/pi/PIToken/abstract/IPITokenClient';
+import { TokenClient } from 'ao-js-sdk/dist/src/clients/ao';
 import { DryRunResult } from '@permaweb/aoconnect/dist/lib/dryrun';
-import { TokenData } from 'ao-process-clients/dist/src/clients/pi/PIToken/types';
+import { TokenData } from 'ao-js-sdk/dist/src/clients/pi/PIToken/types';
 import TokenCard from './TokenCard';
 import '../../Mint.css';
 

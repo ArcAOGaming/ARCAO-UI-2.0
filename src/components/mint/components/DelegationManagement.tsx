@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { DelegationInfo } from 'ao-process-clients/dist/src/clients/pi/delegate/abstract/types';
-import { PIToken } from 'ao-process-clients/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
+import { DelegationInfo } from 'ao-js-sdk/dist/src/clients/pi/delegate/abstract/types';
+import { PIToken } from 'ao-js-sdk/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
 import { useWallet } from '../../../shared-components/Wallet/WalletContext';
 import { dryrun } from '../../../config/aoConnection';
 import '../../Mint.css';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useWallet } from '../shared-components/Wallet/WalletContext';
-import { PIDelegateClient } from 'ao-process-clients';
+import { PIDelegateClient } from 'ao-js-sdk';
 import './Delegate2ArcAO.css';
 import { AO } from '@arcaogaming/project-links';
 

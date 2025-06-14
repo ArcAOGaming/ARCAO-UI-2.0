@@ -5,7 +5,7 @@ import { useWallet } from '../../../../shared-components/Wallet/WalletContext.ts
 import WalletConnection from '../../../../shared-components/Wallet/WalletConnection.tsx';
 import { useScore } from '../../../../shared-components/Score/ScoreContext.tsx';
 import crownImage from '../assets/crowned.png';
-import {gatewayUrl} from '../../../../shared-components/Constants';
+import {gatewayUrl} from '../../../../shared-components/Constants.ts';
 import {
     GAME_CONSTANTS,
     checkCollision,
@@ -17,7 +17,7 @@ import {
     updatePlayerPosition,
     spawnNewBot,
     resetUsedProfiles
-} from './gameHelpers';
+} from './gameHelpers.ts';
 
 // Load crown image
 const crown = new Image();

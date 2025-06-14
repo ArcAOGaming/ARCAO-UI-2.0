@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 :root {
   --primary-bg: #ffffff;
   --secondary-bg: #f7f7f7;
@@ -309,7 +310,7 @@ html {
 }
 
 /* Replaced failing font import with a reliable Google Fonts alternative */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 
 .doc-card {
   background: rgba(255, 255, 255, 0.98);
