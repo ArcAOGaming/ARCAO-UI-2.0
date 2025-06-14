@@ -1,1 +1,1 @@
-export const gatewayUrl = "https://ar.satoshispalace.casino/";
+export const gatewayUrl = "https://ar.io/";
