@@ -1,6 +1,4 @@
 import React from 'react';
-import xIcon from '../assets/x.png';
-import globeIcon from '../assets/globe.png';
 import styled from 'styled-components';
 
 const Card = styled.div`
@@ -115,7 +113,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             rel="noopener noreferrer"
             onClick={(e) => handleClick(e, twitterUrl)}
           >
-            <img src={xIcon} alt="Twitter" />
+            <img src="/x.png" alt="Twitter" />
             Twitter
           </SocialLink>
         )}
@@ -126,7 +124,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
             rel="noopener noreferrer"
             onClick={(e) => handleClick(e, websiteUrl)}
           >
-            <img src={globeIcon} alt="Website" />
+            <img src="/globe.png" alt="Website" />
             Website
           </SocialLink>
         )}

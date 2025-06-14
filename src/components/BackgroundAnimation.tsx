@@ -1,6 +1,5 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
-import animationData from '../assets/background-animation.json';
 import './BackgroundAnimation.css';
 
 const BackgroundAnimation: React.FC<{ isVisible?: boolean }> = ({ isVisible = true }) => {
@@ -10,7 +9,7 @@ const BackgroundAnimation: React.FC<{ isVisible?: boolean }> = ({ isVisible = tr
     <div className="background-animation" style={{ display: isVisible ? 'block' : 'none' }}>
       <Player
         ref={playerRef}
-        src={animationData}
+        src="/background-animation.json"
         loop
         autoplay
         renderer="svg"
