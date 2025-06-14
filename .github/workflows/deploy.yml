@@ -62,10 +62,10 @@ jobs:
       # Alternative deployment configuration (commented out):
       # Use this if you want to deploy directly to the base ArNS without an undername
       # To use this, comment out the above "Deploy with undername" step and uncomment this one
-      #- name: Deploy without undername
-      #  env:
-      #    DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-      #    DEPLOY_ANT_PROCESS_ID: ${{ secrets.DEPLOY_ANT_PROCESS_ID }}
-      #  run: |
-      #    echo "Deploying without undername to base ArNS"
-      #    npm run deploy
+      - name: Deploy without undername
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_ANT_PROCESS_ID: ${{ secrets.DEPLOY_ANT_PROCESS_ID }}
+        run: |
+          echo "Deploying without undername to base ArNS"
+          npm run deploy
