@@ -1,6 +1,8 @@
 import React from 'react';
 import DocCard from './components/DocCard';
 import './Join.css';
+import { ARCAO_LINKS } from '../../links';
+import { ARCAO } from '@arcaogaming/project-links';
 
 const Join: React.FC = () => {
   return (
@@ -37,25 +39,25 @@ const Join: React.FC = () => {
           title="🎮 Game Developers"
           description={<>Build <strong>revolutionary games</strong> with our comprehensive technical guides and tools. Start creating the <strong>next generation</strong> of blockchain gaming experiences.</>}
           buttonText="Developer Docs"
-          buttonUrl="https://docs-arcao_game.ar.ionode.online/docs/game-developers/overview"
+          buttonUrl={ARCAO.acceleratorProgramSignup}
         />
         <DocCard
           title="🎨 Content Creators"
           description={<>Create <strong>engaging content</strong> and build your community. Access exclusive tools and resources to <strong>amplify your impact</strong> in the ArcAO ecosystem.</>}
           buttonText="Creator Guides"
-          buttonUrl="https://docs-arcao_game.ar.ionode.online/docs/content-creators/overview"
+          buttonUrl={ARCAO.ambassadorProgramSignup}
         />
         <DocCard
           title="🏆 Gamers"
           description={<>Experience <strong>provably fair gaming</strong> and earn while you play. Join a community of players shaping the <strong>future of gaming</strong>.</>}
           buttonText="Player Guides"
-          buttonUrl="https://docs-arcao_game.ar.ionode.online/docs/gamers/overview"
+          buttonUrl={ARCAO.docs}
         />
         <DocCard
           title="💰 Investors"
           description={<>Discover <strong>investment opportunities</strong> and participate in governance. Shape the future of gaming with <strong>strategic investments</strong> in the ArcAO ecosystem.</>}
           buttonText="Investor Info"
-          buttonUrl="https://docs-arcao_game.ar.ionode.online/docs/investors/overview"
+          buttonUrl={ARCAO.delegationGuide}
         />
       </div>
         <a 
