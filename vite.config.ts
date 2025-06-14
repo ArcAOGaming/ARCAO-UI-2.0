@@ -5,9 +5,15 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   server: {
-    headers: {
-      'Content-Type': 'application/javascript',
-      'X-Content-Type-Options': 'nosniff'
+    fs: {
+      strict: false
+    },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name].[ext]'
+      }
     }
   }
 })
