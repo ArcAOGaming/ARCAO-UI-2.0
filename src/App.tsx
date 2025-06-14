@@ -20,12 +20,13 @@ import './App.css';
 import { ARCAO_LINKS, RANDAO_LINKS, SATOSHIS_PALACE_LINKS } from './links';
 import { GOOGLE_ANALYTICS_ID } from './constants';
 
+
 // Dynamic imports for game components
 const GameComponents = {
-  PONG: React.lazy(() => import('./games/PongGame')),
-  BRICK_BLITZ: React.lazy(() => import('./games/TetrisGame')),
-  MAZE_MUNCHER: React.lazy(() => import('./games/SatoshiManGame')),
-  FEAST_OR_FAMINE: React.lazy(() => import('./games/FeastFamine')),
+  PONG: React.lazy(() => import(/* webpackChunkName: "pong-game" */ './games/PongGame').then(module => ({ default: module.default }))),
+  BRICK_BLITZ: React.lazy(() => import(/* webpackChunkName: "tetris-game" */ './games/TetrisGame').then(module => ({ default: module.default }))),
+  MAZE_MUNCHER: React.lazy(() => import(/* webpackChunkName: "satoshi-man-game" */ './games/SatoshiManGame').then(module => ({ default: module.default }))),
+  FEAST_OR_FAMINE: React.lazy(() => import(/* webpackChunkName: "feast-famine-game" */ './games/FeastFamine').then(module => ({ default: module.default }))),
 } as const;
 
 type GameComponentType = keyof typeof GameComponents;

@@ -12,7 +12,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name].[ext]'
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'chunks/[name].[hash].js',
+        manualChunks: {
+          'pong-game': ['./src/games/PongGame.tsx'],
+          'tetris-game': ['./src/games/TetrisGame.tsx'],
+          'satoshi-man-game': ['./src/games/SatoshiManGame.tsx'],
+          'feast-famine-game': ['./src/games/FeastFamine.tsx']
+        }
       }
     }
   }
