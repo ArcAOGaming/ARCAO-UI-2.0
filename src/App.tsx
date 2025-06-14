@@ -18,6 +18,7 @@ import { games } from './games/games';
 import styled, { createGlobalStyle } from 'styled-components';
 import './App.css';
 import { ARCAO_LINKS, RANDAO_LINKS, SATOSHIS_PALACE_LINKS } from './links';
+import { GOOGLE_ANALYTICS_ID } from './constants';
 
 // Dynamic imports for game components
 const GameComponents = {
@@ -155,7 +156,7 @@ interface GameComponentProps {
 }
 
 // Initialize Google Analytics
-ReactGA.initialize('G-FVDP2VMRWM');
+ReactGA.initialize(GOOGLE_ANALYTICS_ID);
 
 const AppContent: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<string | null>(null);
