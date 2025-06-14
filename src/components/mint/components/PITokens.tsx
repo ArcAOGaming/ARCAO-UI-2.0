@@ -3,7 +3,7 @@ import { PITokenClient } from 'ao-js-sdk/dist/src/clients/pi';
 import { PIToken } from 'ao-js-sdk/dist/src/clients/pi/oracle/abstract/IPIOracleClient';
 import { TickHistoryEntry } from 'ao-js-sdk/dist/src/clients/pi/PIToken/abstract/IPITokenClient';
 import { TokenClient } from 'ao-js-sdk/dist/src/clients/ao';
-import { DryRunResult } from '@permaweb/aoconnect/dist/lib/dryrun';
+import { DryRunResult } from '@permaweb/aoconnect/browser'
 import { TokenData } from 'ao-js-sdk/dist/src/clients/pi/PIToken/types';
 import TokenCard from './TokenCard';
 import '../../Mint.css';

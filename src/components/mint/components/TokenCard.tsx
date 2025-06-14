@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PIToken, TickHistoryEntry } from 'ao-js-sdk/dist/src/clients/pi';
 import { TokenClient } from 'ao-js-sdk/dist/src/clients/ao';
 import { PITokenClient } from 'ao-js-sdk/dist/src/clients/pi';
-import { DryRunResult } from '@permaweb/aoconnect/dist/lib/dryrun';
+import { DryRunResult } from '@permaweb/aoconnect/browser'
 import '../../Mint.css';
 
 interface TokenData {

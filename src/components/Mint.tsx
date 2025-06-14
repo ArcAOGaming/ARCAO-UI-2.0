@@ -12,7 +12,7 @@ import { DelegationInfo } from 'ao-js-sdk/dist/src/clients/pi/delegate/abstract/
 import { TokenData } from 'ao-js-sdk/dist/src/clients/pi/PIToken/types';
 import { TokenClientMap, TokenClientPair, StateStructure } from 'ao-js-sdk/dist/src/clients/pi/oracle/types';
 import { TokenClient } from 'ao-js-sdk/dist/src/clients/ao';
-import { DryRunResult } from '@permaweb/aoconnect/dist/lib/dryrun';
+import { DryRunResult } from '@permaweb/aoconnect/browser'
 import { useWallet } from '../shared-components/Wallet/WalletContext';
 import './Mint.css';
 
